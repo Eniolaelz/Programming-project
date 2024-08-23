@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Admin Panel</h1>
+            <button id="logoutBtn">Log Out</button>
+        </header>
+
+        <section class="admin-options">
+            <!-- Manage Reservations -->
+            <button id="toggleReservationsBtn">Manage Reservations</button>
+            <div id="reservationsSection" class="admin-section">
+                <h2>Manage Reservations</h2>
+                <div class="reservations-list">
+                    <!-- Example of a reservation card -->
+                    <div class="reservation-card">
+                        <div class="reservation-details">
+                            <p><strong>Product ID:</strong> X-456321</p>
+                            <p><strong>Reservation nr:</strong> 245687</p>
+                            <p><strong>Date:</strong> 27/03/24</p>
+                        </div>
+                        <button class="more-info-btn">More information</button>
+                    </div>
+                    <!-- Repeat .reservation-card for other reservations -->
+                </div>
+
+                <!-- Place the Reservation Detail Section Here -->
+                <div class="reservation-detail">
+                    <h2>Reservation</h2>
+                    <div class="reservation-info">
+                        <p><strong>Reservation nr:</strong> 245687</p>
+                        <p><strong>Reservation from:</strong> 27/03/2024</p>
+                        <p><strong>Product ID:</strong> X-456321</p>
+                        <img src="images/camera1.png" alt="Product Image">
+                        <p><strong>Check Out:</strong> 27/03/24</p>
+                        <p><strong>Check In:</strong> 27/04/24</p>
+                        <p><strong>User ID:</strong> 65432</p>
+                        <p><strong>User Mail:</strong> stephanie@student.edu.be</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="decline-btn">Decline</button>
+                        <button class="accept-btn">Accept</button>
+                    </div>
+                </div>
+
+                <!-- Place All Done and Declined Pages Here -->
+                <div class="all-done-page" style="display: none;">
+                    <h2>All Done</h2>
+                    <p>The reservation has been successfully integrated and the orderer will be kept informed.</p>
+                    <button class="change-mind-btn">Change your mind and still wish to decline? Click here</button>
+                </div>
+
+                <div class="declined-page" style="display: none;">
+                    <h2>Declined</h2>
+                    <p>The reservation has been successfully declined and the orderer will be kept informed.</p>
+                </div>
+            </div>
+
+            <!-- Manage Users -->
+            <button id="toggleUsersBtn">Manage Users</button>
+            <div id="usersSection" class="admin-section">
+                <h2>Manage Users</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userList">
+                        <!-- User data will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Manage Products -->
+            <button id="toggleProductsBtn">Manage Products</button>
+            <div id="productsSection" class="admin-section">
+                <h2>Manage Products</h2>
+                
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" id="productSearch" placeholder="Search products...">
+                    <button type="button" id="searchBtn"><img src="images/search-icon.png" alt="Search"></button>
+                </div>
+
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Picture</th>
+                            <th>Status</th>
+                            <th>Info</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productList">
+                        <!-- Product data will be loaded here with images -->
+                    </tbody>
+                </table>
+
+                <button id="addProductBtn" class="add-product-btn">Add New Product</button>
+
+                <!-- Add New Product Form -->
+                <div id="addProductForm" style="display:none;">
+                    <h3>Add New Product</h3>
+                    <form>
+                        <label for="newProductId">Product ID:</label>
+                        <input type="text" id="newProductId" required>
+
+                        <label for="newProductName">Product Name:</label>
+                        <input type="text" id="newProductName" required>
+
+                        <label for="newProductImage">Product Image URL:</label>
+                        <input type="text" id="newProductImage" required>
+
+                        <label for="newProductStatus">Status:</label>
+                        <select id="newProductStatus">
+                            <option value="Available">Available</option>
+                            <option value="Unavailable">Unavailable</option>
+                        </select>
+
+                        <button type="button" id="saveProductBtn">Save Product</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </div>
+	<footer>
+    <img src="images/logo.png" alt="MediaLab Brussels Logo" class="dashboard-logo">
+    <p>Erasmushogeschool Brussel</p>
+	</footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
