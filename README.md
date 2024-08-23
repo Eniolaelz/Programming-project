@@ -8,7 +8,6 @@ for users to dynamically view products, return items, and contact support.
 
 Features
 Admin Panel:
-
 Login functionality with predefined credentials.
 Manage Users: Add, edit, ban/unban users.
 Manage Reservations: View, accept, or decline reservations. /*not fully functional as initially, the event listeners
