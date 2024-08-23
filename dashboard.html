@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Welcome, [User Name]</h1>
+            <button id="logoutBtn">Log Out</button>
+        </header>
+
+        <section class="user-info">
+            <img src="images/user-avatar.png" alt="User Avatar" class="user-avatar">
+            <h2>Your Reservations</h2>
+            <div id="reservations">
+                <!-- Reservations will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <section class="reserve-products">
+            <h2>Reserve a Product</h2>
+            <div id="product-list">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
